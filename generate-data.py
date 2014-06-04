@@ -24,7 +24,7 @@ def generate_data(in_folder, out_file):
                             relns.add((reln, left[0], right[0]))
 
     #write relns to .tsv file
-    with open(out_file, 'a') as out:
+    with open(out_file, 'w') as out:
         for reln in relns:
             out.write('{0}\t{1}\t{2}\n'.format(reln[0], reln[1], reln[2]))
 
